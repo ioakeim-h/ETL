@@ -16,7 +16,6 @@ class MongoSQLConfig:
 class MongoSQLValidator(MongoSQLConfig):
     """
     Compare the number of records in MongoDB vs SQL across the same time period (by year and month).
-    Designed for collections with a date field (see Scripts -> collection_info.py).
     """
 
     def __init__(self, mongo_config: dict, sql_connection_string: str, field: str):
