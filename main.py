@@ -58,7 +58,6 @@ def main():
     
     for field in field_sets:
         collection_name = field["collection"]
-        print(f"\nValidating {collection_name}")
         
         validator = MongoSQLValidator(MONGO_CONFIG, SQL_CONNECTION_STRING, field)
         
@@ -80,7 +79,6 @@ def main():
 
     if not good_quality:
         send_data_quality_alert()
-    print("\nDATA QUALITY TESTS FINISHED")
     
     error_flag(phase = "finished")   
     
